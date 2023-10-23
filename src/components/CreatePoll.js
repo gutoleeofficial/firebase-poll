@@ -9,7 +9,6 @@ const CreatePoll = ({ onClick }) => {
   const [warning, setWarning] = useState("");
 
   const onSubmit = () => {
-    console.log(title);
     if (title && option0 && option1 && option2 && option3) {
       onClick({
         title,
