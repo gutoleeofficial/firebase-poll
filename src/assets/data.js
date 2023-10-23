@@ -20,11 +20,11 @@ export const exampleData = [
     },
   },
   {
-    title: "Who is the best content member?",
-    option0: "Kyle",
-    option1: "Nisala",
-    option2: "Kyle again",
-    option3: "Anyone else",
+    title: "What is the best streaming service?",
+    option0: "Netflix",
+    option1: "Hulu",
+    option2: "Max",
+    option3: "Prime Video",
     votes: {
       kyle0101: 0,
       nisala0101: 0,
