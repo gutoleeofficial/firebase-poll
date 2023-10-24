@@ -9,6 +9,7 @@ function App() {
 
   const onCreatePoll = (poll) => {
     // Change this function to update the database!
+    setData([...data, poll]);
   };
 
   const onVote = (value, pollData) => {
