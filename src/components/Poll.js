@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Poll = ({ onClick, pollData }) => {
+const Poll = ({ onClick, pollData, uid }) => {
   const [voted, setVoted] = useState(false);
+  
+  useEffect(() => {
+    setVoted(uid in pollData.votes);
+  }, [uid]);
 
   const getResults = () => {
+    if (!pollData.votes) return;
     const resultsArr = Object.values(pollData.votes);
     const outcome = [0, 0, 0, 0];
     for (let i = 0; i < resultsArr.length; i++) {
@@ -27,9 +32,9 @@ const Poll = ({ onClick, pollData }) => {
     );
   };
 
-  const onClickOption = (value) => {
+  const onClickOption = (value, pollData) => {
     setVoted(true);
-    onClick(value);
+    onClick(value, pollData);
   };
 
   return (
@@ -41,7 +46,7 @@ const Poll = ({ onClick, pollData }) => {
         name="option"
         value={0}
         disabled={voted}
-        onClick={(e) => onClickOption(e.target.value)}
+        onClick={(e) => onClickOption(e.target.value, pollData)}
       />
       <label for="option0">{pollData.option0}</label>
       <br />
@@ -51,7 +56,7 @@ const Poll = ({ onClick, pollData }) => {
         name="option"
         value={1}
         disabled={voted}
-        onClick={(e) => onClickOption(e.target.value)}
+        onClick={(e) => onClickOption(e.target.value, pollData)}
       />
       <label for="option0">{pollData.option1}</label>
       <br />
@@ -61,7 +66,7 @@ const Poll = ({ onClick, pollData }) => {
         name="option"
         value={2}
         disabled={voted}
-        onClick={(e) => onClickOption(e.target.value)}
+        onClick={(e) => onClickOption(e.target.value, pollData)}
       />
       <label for="option0">{pollData.option2}</label>
       <br />
@@ -71,7 +76,7 @@ const Poll = ({ onClick, pollData }) => {
         name="option"
         value={3}
         disabled={voted}
-        onClick={(e) => onClickOption(e.target.value)}
+        onClick={(e) => onClickOption(e.target.value, pollData)}
       />
       <label for="option0">{pollData.option3}</label>
       <br />
