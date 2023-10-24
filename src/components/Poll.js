@@ -48,7 +48,7 @@ const Poll = ({ onClick, pollData, uid }) => {
         disabled={voted}
         onClick={(e) => onClickOption(e.target.value, pollData)}
       />
-      <label for="option0">{pollData.option0}</label>
+      <label htmlFor="option0">{pollData.option0}</label>
       <br />
       <input
         type="radio"
@@ -58,7 +58,7 @@ const Poll = ({ onClick, pollData, uid }) => {
         disabled={voted}
         onClick={(e) => onClickOption(e.target.value, pollData)}
       />
-      <label for="option0">{pollData.option1}</label>
+      <label htmlFor="option0">{pollData.option1}</label>
       <br />
       <input
         type="radio"
@@ -68,7 +68,7 @@ const Poll = ({ onClick, pollData, uid }) => {
         disabled={voted}
         onClick={(e) => onClickOption(e.target.value, pollData)}
       />
-      <label for="option0">{pollData.option2}</label>
+      <label htmlFor="option0">{pollData.option2}</label>
       <br />
       <input
         type="radio"
@@ -78,7 +78,7 @@ const Poll = ({ onClick, pollData, uid }) => {
         disabled={voted}
         onClick={(e) => onClickOption(e.target.value, pollData)}
       />
-      <label for="option0">{pollData.option3}</label>
+      <label htmlFor="option0">{pollData.option3}</label>
       <br />
       {voted && (
         <>

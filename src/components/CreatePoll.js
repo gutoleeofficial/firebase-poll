@@ -31,7 +31,7 @@ const CreatePoll = ({ onClick }) => {
   return (
     <>
       <h4>Create Poll</h4>
-      <label for="title">Title</label>
+      <label htmlFor="title">Title</label>
       <input
         type="text"
         name="poll"
@@ -40,7 +40,7 @@ const CreatePoll = ({ onClick }) => {
         onChange={(e) => setTitle(e.target.value)}
       />
       <br />
-      <label for="option0">First Option</label>
+      <label htmlFor="option0">First Option</label>
       <input
         type="text"
         name="poll"
@@ -49,7 +49,7 @@ const CreatePoll = ({ onClick }) => {
         onChange={(e) => setOption0(e.target.value)}
       />
       <br />
-      <label for="option1">Second Option</label> <t />
+      <label htmlFor="option1">Second Option</label>
       <input
         type="text"
         name="poll"
@@ -58,7 +58,7 @@ const CreatePoll = ({ onClick }) => {
         onChange={(e) => setOption1(e.target.value)}
       />
       <br />
-      <label for="option2">Third Option</label>
+      <label htmlFor="option2">Third Option</label>
       <input
         type="text"
         name="poll"
@@ -67,7 +67,7 @@ const CreatePoll = ({ onClick }) => {
         onChange={(e) => setOption2(e.target.value)}
       />
       <br />
-      <label for="option3">Fourth Option</label>
+      <label htmlFor="option3">Fourth Option</label>
       <input
         type="text"
         name="poll"
