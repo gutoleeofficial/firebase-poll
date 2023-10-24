@@ -16,6 +16,7 @@ const CreatePoll = ({ onClick }) => {
         option1,
         option2,
         option3,
+        votes: {}
       });
       setTitle("");
       setOption0("");
