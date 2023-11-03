@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { exampleData } from "./assets/data";
 import Poll from "./components/Poll";
 import CreatePoll from "./components/CreatePoll";
 import { getAuth } from "firebase/auth";
@@ -28,7 +27,7 @@ const auth = getAuth();
 const database = getDatabase();
 
 function App() {
-  const [data, setData] = useState(exampleData);
+  const [data, setData] = useState([]);
   const [user] = useAuthState(auth);
   const [signInWithGoogle] = useSignInWithGoogle(auth);
 
